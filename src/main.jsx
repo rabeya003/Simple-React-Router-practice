@@ -9,7 +9,7 @@ import Contact from "./Component/Contact/Contact";
 import First from "./Component/First/First";
 import Friends from "./Component/Friends/Friends";
 import FriendDetail from "./Component/FriendDetail/FriendDetail";
-import User from "./Component/User/user";
+import User from "./Component/User/User";
 import PostDetails from "./Component/PostDetails/PostDetails";
 
 const router = createBrowserRouter([
@@ -52,6 +52,15 @@ const router = createBrowserRouter([
         element: <PostDetails></PostDetails>,
         loader: ({ params }) =>
           fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`),
+      },
+      {
+        path: "*",
+        element: (
+          <div className="mx-4">
+            <h2>Not Found</h2>
+            <p>44444044444</p>
+          </div>
+        ),
       },
     ],
   },

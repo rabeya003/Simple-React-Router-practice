@@ -16,7 +16,12 @@ const PostDetails = () => {
       <p>
         <small>Body: {body}</small>
       </p>
-      <button onClick={handleGoBack}>Go Back</button>
+      <button
+        className="text-white p-4 m-2 bg-slate-500"
+        onClick={() => handleGoBack()}
+      >
+        Go Back
+      </button>
     </div>
   );
 };
